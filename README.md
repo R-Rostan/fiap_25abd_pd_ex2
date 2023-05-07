@@ -86,13 +86,13 @@ Agregação contendo uma visão agrupada por "productid" e os seguintes indicado
 
    valor do lucro líquido por venda de produto. racional: listprice - standardcost;
    
-   <b>KPI: </b>Afim de entender e classificar o ROI de cada produtos calculamos o net entre o valor de tabela de cada produto sobre o valor de custo assim conseguimos direcionar nossas estratégias para produtos com maior rentabilidade historico;
+   <b>KPI: </b>Para entender e classificar o ROI de cada produtos calculamos o net entre o valor de tabela de cada produto sobre o valor de custo assim conseguimos direcionar nossas estratégias para produtos com maior rentabilidade histórico;
    
 * net_margin
 
    margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost;
    
-   <b>KPI: </b> Afim de calcular o retorno esperado para cada produto focamos na criação desta metrica para acompanhar e estimar resultados aparti de um determinado produto;
+   <b>KPI: </b>Para calcular o retorno esperado para cada produto focamos na criação desta métrica para acompanhar e estimar resultados a parti de um determinado produto;
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_produtos_1.png)
 
@@ -108,18 +108,29 @@ Agregação contendo uma visão agrupada por "customerid" e "city" e os seguinte
 
    classificação por quartil em torno do maior valor total do faturamento do cliente;
    
-   <b>KPI: </b>Partindo da métrica criada a-parti do faturamento do cliente, atribuimos um cálculo estatístico para classificação em quartis para que possamos agrupar de forma como que conseguimos entender e estudar comportamentos;  
+   <b>KPI: </b>Partindo da métrica criada a-parti do faturamento do cliente, atribuímos um cálculo estatístico para classificação em quartis para podermos agrupar de forma como que conseguimos entender e estudar comportamentos;  
    
 * rank_invoicing
 
    ranking por maior valor total do faturamento do cliente;
    
-   <b>KPI: </b> Afim de entender as quebras e concentrações dentro de cada uma das métricas citadas a cima, realizamos a construção do rank a fim de medir e identificar possíveis concentrações e relevância de cada cliente;
+   <b>KPI: </b>De modo a entender as quebras e concentrações dentro de cada uma das métricas citadas a cima, realizamos a construção do rank para medir e identificar possíveis concentrações de cada cliente;
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_clientes_1.png)
 
 ### <b>5 Flattened table</b>
 Com base nas agregações de Cliente e Produto além das informações da base de venda, criamos a tabela desnormalizada com os principais KPIs para o monitoramento do negócio.
 
-Para otimização do modelo, utilizamos como partição a cidade e o quartil como bucketing. A escolha da cidade como partição se dá pela necessidade de entendermos e direcionarmos esforços para cidades mais performáticas, dessa forma o particionamento pela cidade tratia mais performance na execução das análises. Já o quartil como bucketing nos permite fazer a análise performática de quartis específicos para estudar o comportamentos dos clientes.
+Através do comando abaixo o script criará a tabela flatten_table com as devidas partições por cidade e a inserção dos dados;
+><i>hive -f [nome_arquivo_hql]</i>
 
+Para otimização do modelo, utilizamos como partição a cidade:
+
+![image]https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_particoes.png
+
+Assim como o quartil para o bucketing:
+
+![image]https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_bucketing.png
+
+A escolha da cidade como partição se dá pela necessidade de entendermos e direcionarmos esforços para cidades mais performáticas, dessa forma o particionamento pela cidade traria maior desempenho na execução das análises. 
+Já o quartil como bucketing nos permite fazer a análise performática de quartis específicos para estudar os comportamentos dos clientes.
