@@ -78,19 +78,19 @@ Agregação contendo uma visão agrupada por "productid" e os seguintes indicado
    
 * ranking_sales_by_productcategoryid
 
-   ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate;<b>
+   ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate;
    
    <b>KPI: </b> Visando entender a relevância de cada produto e sua representativa de referente aos demais, focamos na criação do ranking de modo a encontrar os melhores produtos a-parti de seus resultados de vendas agrupados pro categoria;
 
 * net
 
-   valor do lucro líquido por venda de produto. racional: listprice - standardcost;</b>
+   valor do lucro líquido por venda de produto. racional: listprice - standardcost;
    
    <b>KPI:</b>: Afim de entender e classificar o ROI de cada produtos calculamos o net entre o valor de tabela de cada produto sobre o valor de custo assim conseguimos direcionar nossas estratégias para produtos com maior rentabilidade historico;
    
 * net_margin
 
-   margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost;</b>
+   margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost;
    
    <b>KPI: </b> Afim de calcular o retorno esperado para cada produto focamos na criação desta metrica para acompanhar e estimar resultados aparti de um determinado produto;
 
