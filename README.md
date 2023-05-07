@@ -64,3 +64,30 @@ No localhost do hive-server (comando <i>"docker exec -it hive-server bash"</i>) 
 - Exemplo: dataset "product"
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/exemplo_dataset_hdfs.png)
+
+## <b>4. Criação das agregações de Produtos e Clientes</b>
+Foram incluídos no script "create_external_tables_query.hql" as criações e inserções de dados das agregações de visão de Produtos e Clientes.
+
+### <b>4.1 Agregação de Produtos</b>
+Agregação contendo uma visão agrupada por "productid" e os seguintes indicadores:
+* ranking_sales_by_productid
+⋅⋅⋅ranking por maior quantidade de produtos vendidos por id e maior quantidade de categorias vendidas para critério de desempate
+* ranking_sales_by_productcategoryid
+⋅⋅⋅ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate
+* net
+⋅⋅⋅valor do lucro líquido por venda de produto. racional: listprice - standardcost
+* net_margin
+⋅⋅⋅margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost
+
+![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_produtos_1.png)
+
+### <b>4.2 Agregação de Clientes</b>
+Agregação contendo uma visão agrupada por "customerid" e "city" e os seguintes indicadores:
+* sum_total_due
+⋅⋅⋅soma do valor total de faturamento do cliente
+* quartile_invoicing
+⋅⋅⋅classificação por quartil em torno do maior valor total do faturamento do cliente
+* rank_invoicing
+⋅⋅⋅ranking por maior valor total do faturamento do cliente
+
+![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_clientes_1.png)
