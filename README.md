@@ -130,7 +130,7 @@ Para otimização do modelo, utilizamos como partição a cidade:
 
 Assim como o quartil para o bucketing:
 
-![image] (https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_bucketing.png)
+![image]([https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_bucketing.png](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_bucketing.png?raw=true)
 
 A escolha da cidade como partição se dá pela necessidade de entendermos e direcionarmos esforços para cidades mais performáticas, dessa forma o particionamento pela cidade traria maior desempenho na execução das análises. 
 Já o quartil como bucketing nos permite fazer a análise performática de quartis específicos para estudar os comportamentos dos clientes.
