@@ -201,3 +201,27 @@ on
     t1.productcategoryid = t3.productcategoryid
 order by
     t1.productid;
+    
+create table if not exists topcustomersales (
+    customerid                         int,
+    city                               string,
+    sum_total_due                      double,
+    quartile_invoicing                 int,
+    rank_invoicing                     int
+)
+row format delimited fields terminated by ';'
+location '/datasets/topcustomers';
+
+insert into topcustomersales
+select 
+    soh.customerid, 
+    a.city,
+    sum(soh.totaldue) sum_total_due, 
+    NTILE(4) OVER (ORDER BY sum(soh.totaldue) DESC) AS quartile_invoicing,
+    rank() over(ORDER BY sum(soh.totaldue) DESC) as rank_invoicing
+from 
+salesorderhead soh
+left join customer c on soh.customerid = c.customerid
+left join customeraddress ca on ca.customerid = c.customerid
+left join address a on a.addressid = ca.addressid
+group by soh.customerid, a.city;
