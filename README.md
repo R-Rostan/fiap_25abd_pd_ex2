@@ -71,6 +71,7 @@ Foram incluídos no script "create_external_tables_query.hql" as criações e in
 ### <b>4.1 Agregação de Produtos</b>
 Agregação contendo uma visão agrupada por "productid" e os seguintes indicadores:
 * ranking_sales_by_productid
+
    ranking por maior quantidade de produtos vendidos por id e maior quantidade de categorias vendidas para critério de desempate
 * ranking_sales_by_productcategoryid
    ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate
