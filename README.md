@@ -13,13 +13,13 @@ Para facilitar a implementação, foi desenvolvido o script "copy_datasets_to_hi
 ><i>docker cp [origem_arquivo] [id_container]:[destino_arquivo]</i>
 
 Além dos arquivos CSV, no mesmo script também são enviados para o container outros dois arquivos, que são:
-- <b>move_datasets_local_to_hdfs.sh:</b> faz a criação das pastas no HDFS para cada arquivo CSV e copia um dos arquivos para dentro de sua pasta.<br>
-Os comandos usados são:
+
+<b>1) move_datasets_local_to_hdfs.sh:</b> faz a criação das pastas no HDFS para cada arquivo CSV e copia um dos arquivos para dentro de sua pasta. Os comandos utilizados são:
 ><i>hadoop fs -mkdir [nome_diretorio]</i> 
 
 ><i>hadoop fs -put [diretorio_origem] [diretorio_destino]</i>
 
-- <b>create_external_tables_query.hql:</b> arquivo com as consultas em SQL de criação das tabelas externas. Este script é lido e todas as consultas para criação do database "adventureworks" e das tabelas externas dentro do database são executadas.<br>
+<b>2) create_external_tables_query.hql:</b> arquivo com as consultas em SQL de criação das tabelas externas. Este script é lido e todas as consultas para criação do database "adventureworks" e das tabelas externas dentro do database são executadas.<br>
 O comando para leitura e execução deste script no hive-server é:
 ><i>hive -f [nome_arquivo_hql]</i> 
 
