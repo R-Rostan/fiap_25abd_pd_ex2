@@ -65,6 +65,10 @@ No localhost do hive-server (comando <i>"docker exec -it hive-server bash"</i>) 
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/exemplo_dataset_hdfs.png)
 
+- Pessoas X Serviços consumidos:
+
+![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/query_pessoas_servico.png)
+
 ## <b>4. Criação das agregações de Produtos e Clientes</b>
 Foram incluídos no script "create_external_tables_query.hql" as criações e inserções de dados das agregações de visão de Produtos e Clientes.
 
