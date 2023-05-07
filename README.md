@@ -117,3 +117,9 @@ Agregação contendo uma visão agrupada por "customerid" e "city" e os seguinte
    <b>KPI: </b> Afim de entender as quebras e concentrações dentro de cada uma das métricas citadas a cima, realizamos a construção do rank a fim de medir e identificar possíveis concentrações e relevância de cada cliente;
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_clientes_1.png)
+
+### <b>5 Flattened table</b>
+Com base nas agregações de Cliente e Produto além das informações da base de venda, criamos a tabela desnormalizada com os principais KPIs para o monitoramento do negócio.
+
+Para otimização do modelo, utilizamos como partição a cidade e o quartil como bucketing. A escolha da cidade como partição se dá pela necessidade de entendermos e direcionarmos esforços para cidades mais performáticas, dessa forma o particionamento pela cidade tratia mais performance na execução das análises. Já o quartil como bucketing nos permite fazer a análise performática de quartis específicos para estudar o comportamentos dos clientes.
+
