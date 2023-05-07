@@ -122,7 +122,7 @@ Agregação contendo uma visão agrupada por "customerid" e "city" e os seguinte
 Com base nas agregações de Cliente e Produto além das informações da base de venda, criamos a tabela desnormalizada com os principais KPIs para o monitoramento do negócio.
 
 Através do comando abaixo o script criará a tabela flatten_table com as devidas partições por cidade e a inserção dos dados;
-><i>hive -f [nome_arquivo_hql]</i>
+><i>hive -f [base_unique_sales]</i>
 
 Para otimização do modelo, utilizamos como partição a cidade:
 
