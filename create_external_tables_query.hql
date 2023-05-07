@@ -142,3 +142,62 @@ create external table salesorderhead (
 row format delimited fields terminated by ';'
 location '/datasets/salesorderhead'
 tblproperties ('skip.header.line.count'='1');
+
+create table if not exists topproductsales (
+    productid                          int,
+    productcatetegoryid                int,
+    ranking_sales_by_productid         int,
+    ranking_sales_by_productcategoryid int,
+    net                                double,
+    net_margin                         double
+)
+row format delimited fields terminated by ';'
+location '/datasets/topproducts';
+
+insert into topproductsales
+select
+    t1.productid,
+    t1.productcategoryid,
+    rank() over(
+        order by
+            t2.qtd desc,
+            t3.qtd desc
+    ) as ranking_sales_by_productid,
+    rank() over(
+        order by
+            t3.qtd desc,
+            t2.qtd desc
+    ) as ranking_sales_by_productcategoryid,
+    (t1.listprice - t1.standardcost) as net,
+    ((t1.listprice - t1.standardcost)/t1.standardcost) as net_margin
+from 
+    product as t1
+    
+left join (
+    select
+        productid,
+        sum(orderqty) as qtd
+    from
+        salesorderdetail
+    group by
+        productid
+) as t2
+on
+    t1.productid = t2.productid
+
+left join (
+    select
+        b.productcategoryid,
+        sum(a.orderqty) as qtd
+    from
+        salesorderdetail as a
+    inner join product as b
+    on
+        a.productid = b.productid
+    group by
+        b.productcategoryid
+) as t3
+on
+    t1.productcategoryid = t3.productcategoryid
+order by
+    t1.productid;
