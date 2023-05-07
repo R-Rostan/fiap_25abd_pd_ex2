@@ -1,6 +1,6 @@
 # <b>Desenvolvimento de database no Hive</b>
->MBA Engenharia de Dados FIAP | Turma 25ABD<br>
-Repositório para projeto do exercício 2 da matéria de processamento e armazenamento distribuído de dados do MBA de Engenharia de Dados.
+<i>MBA Engenharia de Dados FIAP | Turma 25ABD<br>
+Repositório para projeto do exercício 2 da matéria de processamento e armazenamento distribuído de dados do MBA de Engenharia de Dados.</i><br><br>
 
 O ambiente de Big Data utilizado neste projeto está disponível no seguinte repositório:
 - https://github.com/fabiogjardim/bigdata_docker
