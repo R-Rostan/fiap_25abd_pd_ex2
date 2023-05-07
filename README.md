@@ -126,7 +126,7 @@ Através do comando abaixo o script criará a tabela flatten_table com as devida
 
 Para otimização do modelo, utilizamos como partição a cidade:
 
-![image] (https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_particoes.png)
+![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/flatten_particoes.png?raw=true)
 
 Assim como o quartil para o bucketing:
 
