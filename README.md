@@ -74,10 +74,13 @@ Agregação contendo uma visão agrupada por "productid" e os seguintes indicado
 
    ranking por maior quantidade de produtos vendidos por id e maior quantidade de categorias vendidas para critério de desempate
 * ranking_sales_by_productcategoryid
+
    ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate
 * net
+
    valor do lucro líquido por venda de produto. racional: listprice - standardcost
 * net_margin
+
    margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_produtos_1.png)
@@ -85,10 +88,13 @@ Agregação contendo uma visão agrupada por "productid" e os seguintes indicado
 ### <b>4.2 Agregação de Clientes</b>
 Agregação contendo uma visão agrupada por "customerid" e "city" e os seguintes indicadores:
 * sum_total_due
+
    soma do valor total de faturamento do cliente
 * quartile_invoicing
+
    classificação por quartil em torno do maior valor total do faturamento do cliente
 * rank_invoicing
+
    ranking por maior valor total do faturamento do cliente
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_clientes_1.png)
