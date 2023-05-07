@@ -72,22 +72,22 @@ Foram incluídos no script "create_external_tables_query.hql" as criações e in
 Agregação contendo uma visão agrupada por "productid" e os seguintes indicadores:
 * ranking_sales_by_productid
 
-   ranking por maior quantidade de produtos vendidos por id e maior quantidade de categorias vendidas para critério de desempate;</b>
-   KPI: Visando entender a relevância de cada produto e sua representativa de referente aos demais, focamos na criação do ranking de modo a encontrar os melhores produtos a-parti de seus resultados de venda;</b>
+   ranking por maior quantidade de produtos vendidos por id e maior quantidade de categorias vendidas para critério de desempate;<b>
+   <b>KPI: Visando entender a relevância de cada produto e sua representativa de referente aos demais, focamos na criação do ranking de modo a encontrar os melhores produtos a-parti de seus resultados de venda;<b>
    
 * ranking_sales_by_productcategoryid
 
-   ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate;</b>
-   KPI: Visando entender a relevância de cada produto e sua representativa de referente aos demais, focamos na criação do ranking de modo a encontrar os melhores produtos a-parti de seus resultados de vendas agrupados pro categoria;</b>
+   ranking por maior quantidade de categorias vendidas e maior quantidade de produtos vendidos por id para critério de desempate;<b>
+   <b>KPI: Visando entender a relevância de cada produto e sua representativa de referente aos demais, focamos na criação do ranking de modo a encontrar os melhores produtos a-parti de seus resultados de vendas agrupados pro categoria;<b>
 * net
 
    valor do lucro líquido por venda de produto. racional: listprice - standardcost;</b>
-   KPI: Afim de entender e classificar o ROI de cada produtos calculamos o net entre o valor de tabela de cada produto sobre o valor de custo assim conseguimos direcionar nossas estratégias para produtos com maior rentabilidade historico;</b>
+   <b>KPI: Afim de entender e classificar o ROI de cada produtos calculamos o net entre o valor de tabela de cada produto sobre o valor de custo assim conseguimos direcionar nossas estratégias para produtos com maior rentabilidade historico;</b>
    
 * net_margin
 
    margem percentual do lucro líquido do produto sobre o custo. racional: (listprice - standardcost)/standardcost;</b>
-   KPI: Afim de calcular o retorno esperado para cada produto focamos na criação desta metrica para acompanhar e estimar resultados aparti de um determinado produto;</b>
+   <b>KPI: Afim de calcular o retorno esperado para cada produto focamos na criação desta metrica para acompanhar e estimar resultados aparti de um determinado produto;</b>
 
 ![image](https://github.com/R-Rostan/fiap_25abd_pd_ex2/blob/main/imgs/agg_produtos_1.png)
 
